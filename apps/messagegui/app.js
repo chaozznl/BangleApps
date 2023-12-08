@@ -343,8 +343,9 @@ function showMessage(msgid) {
   function goBack() {
     layout = undefined;
     msg.new = false; // read mail
-    cancelReloadTimeout(); // don't auto-reload to clock now
-    checkMessages({clockIfNoMsg:1,clockIfAllRead:0,showMsgIfUnread:0,openMusic:openMusic});
+    load(); // return to clockface instead of message list
+    //cancelReloadTimeout(); // don't auto-reload to clock now
+    //checkMessages({clockIfNoMsg:1,clockIfAllRead:0,showMsgIfUnread:0,openMusic:openMusic});
   }
   var negHandler,posHandler,footer = [ ];
   if (msg.negative) {
